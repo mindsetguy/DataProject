@@ -1,0 +1,110 @@
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+<link rel="icon" href="../../favicon.ico"></link>
+
+<title>CsvDataMaker</title>
+
+<!-- Bootstrap core CSS -->
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+
+<style>
+html,
+body{
+ height: 100%;
+}
+
+#cover {
+  background: #fff url('') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#cover-caption {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+        <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #DDD; height:8vh;">
+                <a class="navbar-brand h1" href="#">Csv Data Maker</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse d-flex justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="#" style="color:black;">Home
+                                <span class="sr-only">(current)</span>
+                        </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Why?</a></li> 
+                        <li class="nav-item dropdown"><a
+                            class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" style="color:black;"> Dropdown </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">To generation page</a> <a
+                                    class="dropdown-item" href="#">Generate random csv file</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Motivation</a>
+                            </div></li>
+                    </ul>
+                </div>
+            </nav>
+        <section id="cover">
+                <div id="cover-caption">
+                    <div id="container" class="container">
+                        <div class="row">
+                            <div class="col-sm-6 offset-sm-3 text-center">
+                                <h1 class="display-4">Csv Data Maker</h1>
+                                <h3> Enter the parameters and specifications and get the file. </h3>
+                                <div class="info-form">
+                                    <form action="" class="form-inlin justify-content-center">
+                                        <div class="form-group mt-2">
+                                            <label class="sr-only">Parameters per line</label>
+                                            <input type="text" class="form-control" placeholder="params">
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <label class="sr-only">Rows in a file</label>
+                                            <input type="text" class="form-control" placeholder="lines">
+                                        </div>
+                                        <button type="submit" class="btn btn-danger mt-2">proceed!</button>
+                                    </form>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+</body>
+</html>
