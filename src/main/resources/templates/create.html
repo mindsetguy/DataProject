@@ -80,12 +80,6 @@ body{
                     </ul>
                 </div>
             </nav>
-            <form action="#" th:action="@{/process}" th:object="${csvbean}">
-                <p>Id: <input type="text" name= "parameters" th:field="*{parameters}" /></p>
-                <p>Message: <input type="text" name= "rows" th:field="*{rows}" /></p>
-                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-            </form>
-
             <section id="cover">
                     <div id="cover-caption">
                         <div id="container" class="container">
