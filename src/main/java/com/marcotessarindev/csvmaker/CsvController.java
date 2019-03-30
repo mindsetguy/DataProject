@@ -11,13 +11,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.Date;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class CsvController {
-	private String appMode;
+    
+    private String appMode;
+    
 	
-	@ModelAttribute
+	@ModelAttribute(value= "csvbean")
 	CsvBean setupForm() {
 	    return new CsvBean();
 	}
@@ -37,31 +39,23 @@ public class CsvController {
 		return "create";
 	}
 
-	@PostMapping("/process")
-	public String processs(@ModelAttribute CsvBean model) {
+	@RequestMapping(value = "/process", method = RequestMethod.POST)
+	public String process(@ModelAttribute CsvBean csvbean) {
 		
 		// get the attributes inside the model 
-		int parameterNumber = ((CsvBean)model).getParameters();
-		int rowNumber = ((CsvBean)model).getRows();
+		String parameterNumber = ((CsvBean)csvbean).getParameters();
+		String rowNumber = ((CsvBean)csvbean).getRows();
 		
-		System.out.println(parameterNumber + " " + rowNumber + " post"); 
+		System.out.println(parameterNumber + " " + rowNumber + " post");
 		
 		//File file = createRandomCsvFile(10, 100);
-		return "getPro";
+		return "process";
 	}
 	
-	@GetMapping("/process")	
-	public String process(Model model) {
-		
-		// get the attributes inside the model 
-		int parameterNumber = ((CsvBean)model).getParameters();
-		int rowNumber = ((CsvBean)model).getRows();
-		
-		System.out.println(parameterNumber + " " + rowNumber);
-		
-		// File file = createRandomCsvFile(10, 100);
-				
-		return "getPro";
-	}
+    // @RequestMapping(value = "/process", method = RequestMethod.GET)
+    // public String process(Model model) {
+    //     model.addAttribute("csvbean", new CsvBean());
+    //     return "process";
+    // }
 	
 }

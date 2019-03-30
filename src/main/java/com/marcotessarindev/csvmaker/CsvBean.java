@@ -1,34 +1,34 @@
 package com.marcotessarindev.csvmaker;
 
 public class CsvBean {
-    private int parameters;
-    private int rows;
-
-    /**
-     * @return the parameters
-     */
-    public int getParameters() {
-        return parameters;
-    }
-
+    private String parameters;
+    private String rows;
+    
     /**
      * @param parameters the parameters to set
      */
-    public void setParameters(int parameters) {
+    public void setParameters(String parameters) {
         this.parameters = parameters;
     }
 
     /**
-     * @return the rows
+     * @return the parameters
      */
-    public int getRows() {
-        return rows;
+    public String getParameters() {
+        return parameters;
     }
 
     /**
      * @param rows the rows to set
      */
-    public void setRows(int rows) {
+    public void setRows(String rows) {
         this.rows = rows;
+    }
+
+    /**
+     * @return the rows
+     */
+    public String getRows() {
+        return rows;
     }
 }

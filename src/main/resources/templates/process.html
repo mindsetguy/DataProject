@@ -30,25 +30,6 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 crossorigin="anonymous"></script>
 
-<style>
-html,
-body{
- height: 100%;
-}
-
-#cover {
-  background: #fff url('') center center no-repeat;
-  background-size: cover;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-#cover-caption {
-  width: 100%;
-}
-</style>
 </head>
 <body>
         <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #DDD; height:8vh;">
@@ -79,38 +60,9 @@ body{
                             </div></li>
                     </ul>
                 </div>
-            </nav>
-            <form action="#" th:action="@{/process}" th:object="${csvbean}">
-                <p>Id: <input type="text" name= "parameters" th:field="*{parameters}" /></p>
-                <p>Message: <input type="text" name= "rows" th:field="*{rows}" /></p>
-                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-            </form>
-
-            <section id="cover">
-                    <div id="cover-caption">
-                        <div id="container" class="container">
-                            <div class="row">
-                                <div class="col-sm-6 offset-sm-3 text-center">
-                                    <h1 class="display-4">Csv Data Maker</h1>
-                                    <h3> Enter the parameters and specifications and get the file. </h3>
-                                    <div class="info-form">
-                                            <form action="#" th:action="@{/process}" th:object="${csvbean}" method="POST" class="form-inlin justify-content-center">
-                                            <div class="form-group mt-2">
-                                                <label class="sr-only">Parameters per line</label>
-                                                <input type="text" class="form-control" name= "parameters" th:field="*{parameters}" placeholder="params">
-                                            </div>
-                                            <div class="form-group mt-1">
-                                                <label class="sr-only">Rows in a file</label>
-                                                <input type="text" class="form-control" name= "rows" th:field="*{rows}" placeholder="lines">
-                                            </div>
-                                            <input type="submit" value="Submit" />proceed!</input> 
-                                        </form>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            </nav>     
+            <main>
+                <button>download</button>
+            </main>  
 </body>
 </html>
